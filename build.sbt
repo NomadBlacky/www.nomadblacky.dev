@@ -11,6 +11,8 @@ lazy val infra = (project in file("infra"))
   .settings(
     name := "infra",
     libraryDependencies ++= Seq(
-        "software.amazon.awscdk" % "cloudfront" % versions.cdk
+        "software.amazon.awscdk" % "cloudfront"      % versions.cdk,
+        "software.amazon.awscdk" % "route53-targets" % versions.cdk,
+        "software.amazon.awscdk" % "s3-deployment"   % versions.cdk
       )
   )
