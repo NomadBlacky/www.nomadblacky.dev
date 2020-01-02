@@ -111,3 +111,4 @@ project/plugins/project/
 node_modules/
 cdk.out/
 cdk.context.json
+public/js/

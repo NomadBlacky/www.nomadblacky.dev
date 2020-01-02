@@ -16,3 +16,16 @@ lazy val infra = (project in file("infra"))
         "software.amazon.awscdk" % "s3-deployment"   % versions.cdk
       )
   )
+
+lazy val website = (project in file("website"))
+  .enablePlugins(ScalaJSPlugin)
+  .settings(
+    name := "website",
+    scalaJSUseMainModuleInitializer := true,
+    libraryDependencies ++= Seq(
+        "org.scala-js" %%% "scalajs-dom" % "0.9.8"
+      ),
+    crossTarget in (Compile, fullOptJS) := file("public/js"),
+    crossTarget in (Compile, fastOptJS) := file("public/js"),
+    artifactPath in (Compile, fastOptJS) := (crossTarget in (Compile, fastOptJS)).value / ((moduleName in fastOptJS).value + "-opt.js")
+  )
