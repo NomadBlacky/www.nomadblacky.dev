@@ -1,15 +1,12 @@
 package dev.nomadblacky.www.website
 
-import org.scalajs.dom
-import dom.document
+import japgolly.scalajs.react.vdom.html_<^._
+import org.scalajs.dom._
 
 object WebAppMain {
   def main(args: Array[String]): Unit = {
     println("Hi")
 
-    val h1 = document.createElement("h1")
-    h1.innerText = "www.nomadblacky.dev"
-
-    document.body.appendChild(h1)
+    <.h1("www.nomadblacky.dev").renderIntoDOM(document.body)
   }
 }

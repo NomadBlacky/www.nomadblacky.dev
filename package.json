@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "aws-cdk": "^1.19.0",
-    "source-map-support": "^0.5.16"
-  }
-}
