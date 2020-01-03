@@ -42,5 +42,6 @@ lazy val website = (project in file("website"))
     crossTarget in (Compile, fastOptJS) := generatedDir,
     crossTarget in (Compile, packageJSDependencies) := generatedDir,
     crossTarget in (Compile, packageMinifiedJSDependencies) := generatedDir,
-    artifactPath in (Compile, fastOptJS) := (crossTarget in (Compile, fastOptJS)).value / ((moduleName in fastOptJS).value + "-opt.js")
+    artifactPath in (Compile, fastOptJS) := (crossTarget in (Compile, fastOptJS)).value / ((moduleName in fastOptJS).value + "-opt.js"),
+    cleanFiles += generatedDir
   )
