@@ -29,6 +29,7 @@ lazy val website = (project in file("website"))
     libraryDependencies ++= Seq(
         "org.scala-js"                      %%% "scalajs-dom" % "0.9.8",
         "com.github.japgolly.scalajs-react" %%% "core"        % versions.scalaJSReact,
+        "com.github.japgolly.scalajs-react" %%% "extra"       % versions.scalaJSReact,
         "com.github.japgolly.scalacss"      %%% "core"        % versions.scalaCSS,
         "com.github.japgolly.scalacss"      %%% "ext-react"   % versions.scalaCSS
       ),
