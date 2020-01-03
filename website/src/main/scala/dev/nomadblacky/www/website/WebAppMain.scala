@@ -1,7 +1,7 @@
 package dev.nomadblacky.www.website
 
 import dev.nomadblacky.www.website.css.AppCSS
-import dev.nomadblacky.www.website.router.AppRouter
+import dev.nomadblacky.www.website.routes.AppRouter
 import org.scalajs.dom._
 
 object WebAppMain {
